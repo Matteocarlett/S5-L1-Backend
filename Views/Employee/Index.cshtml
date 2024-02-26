@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Employee";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Employee</h1>
+</div>
+<h2>Modulo di registrazione dipendenti</h2>
+
+<form action="/registra_dipendente" method="post">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" required><br>
+
+    <label for="cognome">Cognome:</label><br>
+    <input type="text" id="cognome" name="cognome" required><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="telefono">Telefono:</label><br>
+    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+39 ..." required><br>
+
+    <label for="data_nascita">Data di nascita:</label><br>
+    <input type="date" id="data_nascita" name="data_nascita" required><br>
+
+    <label for="sesso">Sesso:</label><br>
+    <input type="radio" id="sesso_m" name="sesso" value="Maschio" required>
+    <label for="sesso_m">Maschio</label>
+    <input type="radio" id="sesso_f" name="sesso" value="Femmina" required>
+    <label for="sesso_f">Femmina</label><br>
+
+    <input type="submit" value="Registra">
+</form>

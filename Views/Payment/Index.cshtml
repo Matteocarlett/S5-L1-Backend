@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Payment";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Shop</h1>
+</div>
+
+<h2>Modulo Pagamento Dipendenti</h2>
+
+<form action="/process_payment" method="post">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" required><br><br>
+
+    <label for="cognome">Cognome:</label><br>
+    <input type="text" id="cognome" name="cognome" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="indirizzo">Indirizzo:</label><br>
+    <input type="text" id="indirizzo" name="indirizzo"><br><br>
+
+    <label for="città">Città:</label><br>
+    <input type="text" id="città" name="città"><br><br>
+
+    <label for="stipendio">Stipendio:</label><br>
+    <input type="number" id="stipendio" name="stipendio" required><br><br>
+
+    <label for="metodo_pagamento">Metodo di Pagamento:</label><br>
+    <select id="metodo_pagamento" name="metodo_pagamento" required>
+        <option value="bonifico">Bonifico Bancario</option>
+        <option value="assegno">Assegno</option>
+        <option value="contanti">Contanti</option>
+    </select><br><br>
+
+    <label for="data_pagamento">Data Pagamento:</label><br>
+    <input type="date" id="data_pagamento" name="data_pagamento" required><br><br>
+
+    <input type="submit" value="Invia">
+</form>
